@@ -18,7 +18,9 @@
 <img alt="SonarQube" src="https://img.shields.io/badge/SonarQube-quality%20gate-4E9BCD?style=flat-square">
 <img alt="Trivy" src="https://img.shields.io/badge/Trivy-scanned-1904DA?style=flat-square">
 <img alt="OWASP" src="https://img.shields.io/badge/OWASP-Dependency--Check-000000?style=flat-square">
-<a href="https://github.com/ArslanNagori/EKS-GitOps-DevSecOps-Platform/actions/workflows/lint.yml"><img alt="Lint" src="https://github.com/ArslanNagori/EKS-GitOps-DevSecOps-Platform/actions/workflows/lint.yml/badge.svg"></a>
+<a href="https://github.com/ArslanNagori/EKS-GitOps-DevSecOps-Platform/actions/workflows/github-actions.yml">
+  <img alt="Lint" src="https://github.com/ArslanNagori/EKS-GitOps-DevSecOps-Platform/actions/workflows/github-actions.yml/badge.svg">
+</a>
 <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-green?style=flat-square"></a>
 </p>
 
