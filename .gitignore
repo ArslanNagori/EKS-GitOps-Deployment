@@ -1,0 +1,32 @@
+# Secrets and credentials - never commit these
+*.pem
+*.key
+*.env
+.env*
+.aws/
+credentials
+kubeconfig
+.kube/
+*.secret
+argocd-password*
+grafana-password*
+
+# Terraform (planned next step)
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+
+# Downloads and archives
+*.zip
+*.tar.gz
+get_helm.sh
+awscliv2.zip
+aws/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

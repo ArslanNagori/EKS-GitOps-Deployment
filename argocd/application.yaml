@@ -1,0 +1,27 @@
+# ArgoCD Application: deploys the Wanderlust manifests to the EKS cluster.
+# Apply with: kubectl apply -f argocd/application.yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: wanderlust
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/ArslanNagori/Wanderlust.git
+    targetRevision: main        # branch ArgoCD watches
+    path: kubernetes            # folder that contains the Kubernetes manifests
+  destination:
+    # The EKS cluster was registered with: argocd cluster add <context> --name wanderlust-eks-cluster
+    name: wanderlust-eks-cluster
+    # Simpler alternative for the cluster ArgoCD itself runs in (no extra token needed):
+    # server: https://kubernetes.default.svc
+    namespace: wanderlust
+  syncPolicy:
+    automated: {}               # auto sync enabled
+    # Optional drift correction - enable if you want it:
+    # automated:
+    #   prune: true             # delete resources removed from Git
+    #   selfHeal: true          # revert manual changes made in the cluster
+    syncOptions:
+      - CreateNamespace=true
